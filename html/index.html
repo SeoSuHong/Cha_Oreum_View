@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../image/headLogo.png" rel="shortcut icon" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div id="header">
+            <div id="header_empty"></div>
+            <a href="index.html"><img src="../image/logo.png" alt="logo" id="logo"></a>
+            <div id="account">
+                <a href="">Log In</a>
+                <a href="">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    
+    <div id="body">
+        <!-- aside -->
+        <aside>
+            <div id="hideMenu"><img src="../image/hideMenu.png" alt="숨기기" class="hide"></div>
+            <div id="showMenu"><img src="../image/showMenu.png" alt="보이기" class="show"></div>
+            <div id="aside_wrap">
+                <div id="menu_btn">
+                    <button id="world">World</button>
+                    <button id="my">My</button>
+                </div>
+                <div id="category">
+                    <div class="mainCategory">Language</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>JAVA</p></div>
+                        <div class="subCategory"><p>Python</p></div>
+                        <div class="subCategory"><p>C</p></div>
+                    </div>
+
+                    <div class="mainCategory">Front-End</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>HTML</p></div>
+                        <div class="subCategory"><p>CSS</p></div>
+                        <div class="subCategory"><p>JavaScript</p></div>
+                    </div>
+
+                    <div class="mainCategory">Back-End</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>PHP</p></div>
+                        <div class="subCategory"><p>JSP</p></div>
+                        <div class="subCategory"><p>Spring</p></div>
+                    </div>
+
+                    <div class="mainCategory">Database</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>Oracle</p></div>
+                        <div class="subCategory"><p>MySQL</p></div>
+                    </div>
+
+                    <div class="mainCategory">Project Management</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>GitHub</p></div>
+                    </div>
+
+                    <div class="mainCategory">ETC</div>
+                    <div class="sub">
+                        <div class="subCategory"><p>Error</p></div>
+                        <div class="subCategory"><p>QnA</p></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- main -->
+        <main>
+
+            <div id="search_wrap">
+                <div></div>
+                <form name="searchForm" id="searchForm" action="" method="get">
+                    <select name="field" id="field">
+                        <option value="title">제목</option>
+                        <option value="nickname">작성자</option>
+                    </select>
+                    <div id="keyword_wrap">
+                        <input name="keyword" id="keyword">
+                        <img src="../image/search_btn.png" alt="검색">
+                    </div>
+                </form>
+            </div>
+
+        </main>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div id="footer">
+            <a href="index.html">Cha Oreum :: 개발자 전용 블로그</a>
+        </div>
+
+    </footer>
+</body>
+</html>
