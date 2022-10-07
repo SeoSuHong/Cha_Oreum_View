@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../image/headLogo.png" rel="shortcut icon" type="image/x-icon">
-    <title>Document</title>
+    <title>Cha Oreum</title>
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../js/index.js"></script>
@@ -23,79 +23,205 @@
         </div>
     </header>
     
-    <div id="body">
-        <!-- aside -->
-        <aside>
-            <div id="hideMenu"><img src="../image/hideMenu.png" alt="숨기기" class="hide"></div>
-            <div id="showMenu"><img src="../image/showMenu.png" alt="보이기" class="show"></div>
-            <div id="aside_wrap">
-                <div id="menu_btn">
-                    <button id="world">World</button>
-                    <button id="my">My</button>
+    <form id="indexForm" name="indexForm" action="index.html" method="get">
+        <div id="body">
+
+            <!-- aside -->
+            <aside>
+                <div id="hideMenu"><img src="../image/hideMenu.png" alt="숨기기" class="hide"></div>
+                <div id="showMenu"><img src="../image/showMenu.png" alt="보이기" class="show"></div>
+                <div id="aside_wrap">
+                    <div id="menu_btn">
+                        <button id="world">World</button>
+                        <button id="my">My</button>
+                    </div>
+                    <div id="category">
+                        <div class="mainCategory">Language</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>JAVA</p></div>
+                            <div class="subCategory"><p>Python</p></div>
+                            <div class="subCategory"><p>C</p></div>
+                        </div>
+
+                        <div class="mainCategory">Front-End</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>HTML</p></div>
+                            <div class="subCategory"><p>CSS</p></div>
+                            <div class="subCategory"><p>JavaScript</p></div>
+                        </div>
+
+                        <div class="mainCategory">Back-End</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>PHP</p></div>
+                            <div class="subCategory"><p>JSP</p></div>
+                            <div class="subCategory"><p>Spring</p></div>
+                        </div>
+
+                        <div class="mainCategory">Database</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>Oracle</p></div>
+                            <div class="subCategory"><p>MySQL</p></div>
+                        </div>
+
+                        <div class="mainCategory">Project Management</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>GitHub</p></div>
+                        </div>
+
+                        <div class="mainCategory">ETC</div>
+                        <div class="sub">
+                            <div class="subCategory"><p>Error</p></div>
+                            <div class="subCategory"><p>QnA</p></div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div id="category">
-                    <div class="mainCategory">Language</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>JAVA</p></div>
-                        <div class="subCategory"><p>Python</p></div>
-                        <div class="subCategory"><p>C</p></div>
-                    </div>
 
-                    <div class="mainCategory">Front-End</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>HTML</p></div>
-                        <div class="subCategory"><p>CSS</p></div>
-                        <div class="subCategory"><p>JavaScript</p></div>
-                    </div>
+            </aside>
 
-                    <div class="mainCategory">Back-End</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>PHP</p></div>
-                        <div class="subCategory"><p>JSP</p></div>
-                        <div class="subCategory"><p>Spring</p></div>
-                    </div>
+            <!-- main -->
+            <main>
 
-                    <div class="mainCategory">Database</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>Oracle</p></div>
-                        <div class="subCategory"><p>MySQL</p></div>
+                <!-- 검색 기능 -->
+                <div id="search_wrap">
+                    <div></div>
+                    <div id="search">
+                        <select id="field">
+                            <option value="title">제목</option>
+                            <option value="nickname">작성자</option>
+                        </select>
+                        <div id="keyword_wrap">
+                            <input id="keyword">
+                            <img id="search_btn" src="../image/search_btn.png" alt="검색" onclick="search()">
+                        </div>
                     </div>
-
-                    <div class="mainCategory">Project Management</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>GitHub</p></div>
-                    </div>
-
-                    <div class="mainCategory">ETC</div>
-                    <div class="sub">
-                        <div class="subCategory"><p>Error</p></div>
-                        <div class="subCategory"><p>QnA</p></div>
-                    </div>
-                    
                 </div>
-            </div>
 
-        </aside>
-
-        <!-- main -->
-        <main>
-
-            <div id="search_wrap">
-                <div></div>
-                <form name="searchForm" id="searchForm" action="" method="get">
-                    <select name="field" id="field">
-                        <option value="title">제목</option>
-                        <option value="nickname">작성자</option>
-                    </select>
-                    <div id="keyword_wrap">
-                        <input name="keyword" id="keyword">
-                        <img src="../image/search_btn.png" alt="검색">
+                <!-- 정렬 기능 -->
+                <div id="sort_wrap">
+                    <div id="newSort_wrap" style="cursor: pointer;" onclick="sort('new')">
+                        <img src="../image/checkedSort.png">
+                        <span style="color: #38424A;">최신</span>
                     </div>
-                </form>
-            </div>
+                    <div id="hotSort_wrap" style="cursor: pointer;" onclick="sort('hot')">
+                        <img src="../image/uncheckedSort.png">
+                        <span style="color: #AEAEAE;">인기</span>
+                    </div>
+                    <div id="lookSort_wrap" style="cursor: pointer;" onclick="sort('look')">
+                        <img src="../image/uncheckedSort.png">
+                        <span style="color: #AEAEAE;">조회</span>
+                    </div>
+                </div>
 
-        </main>
-    </div>
+                <!-- 컨텐츠 -->
+                <div id="contents">
+
+                    <div class="content">
+                        <div>
+                            <div>
+                                <span>Dev_Hong</span>
+                                <span>❤️86</span>
+                                <span><img src="../image/look.png">130</span>
+                                <span>Language - JAVA</span>
+                            </div>
+                            <div>
+                                <span>2022-10-07</span>
+                            </div>
+                        </div>
+
+                        <div>자바 데이터 타입, 변수 그리고 배열</div>
+                        <div>
+                            우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <div>
+                                <span>Dev_Hong</span>
+                                <span>❤️86</span>
+                                <span><img src="../image/look.png">130</span>
+                                <span>Language - JAVA</span>
+                            </div>
+                            <div>
+                                <span>2022-10-07</span>
+                            </div>
+                        </div>
+
+                        <div>자바 데이터 타입, 변수 그리고 배열</div>
+                        <div>
+                            우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <div>
+                                <span>Dev_Hong</span>
+                                <span>❤️86</span>
+                                <span><img src="../image/look.png">130</span>
+                                <span>Language - JAVA</span>
+                            </div>
+                            <div>
+                                <span>2022-10-07</span>
+                            </div>
+                        </div>
+
+                        <div>자바 데이터 타입, 변수 그리고 배열</div>
+                        <div>
+                            우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <div>
+                                <span>Dev_Hong</span>
+                                <span>❤️86</span>
+                                <span><img src="../image/look.png">130</span>
+                                <span>Language - JAVA</span>
+                            </div>
+                            <div>
+                                <span>2022-10-07</span>
+                            </div>
+                        </div>
+
+                        <div>자바 데이터 타입, 변수 그리고 배열</div>
+                        <div>
+                            우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <div>
+                                <span>Dev_Hong</span>
+                                <span>❤️86</span>
+                                <span><img src="../image/look.png">130</span>
+                                <span>Language - JAVA</span>
+                            </div>
+                            <div>
+                                <span>2022-10-07</span>
+                            </div>
+                        </div>
+
+                        <div>자바 데이터 타입, 변수 그리고 배열</div>
+                        <div>
+                            우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다. 우리가 주로 사용하는 값의 종류는 크게 문자와 숫자로 나눌 수 있으며 여기서 숫자는 다시 정수와 실수로 나뉜다. 기본형은 모두 8가지의 타입(자료형)이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <input type="hidden" name="c" id="category" value="">
+            <input type="hidden" name="t" id="title" value="">
+            <input type="hidden" name="n" id="nickname" value="">
+            <input type="hidden" name="s" id="sort" value="">
+        </div>
+    </form>
+
     <!-- footer -->
     <footer>
         <div id="footer">
