@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
     font-family: 'NanumGothic';
     src: url('../font/NanumGothic.eot');
     src: url('../font/NanumGothic.eot') format('embedded-opentype')
         ,url('../font/NanumGothic.woff') format('woff');
-}
+} */
 
 * {
     margin: 0;
@@ -21,11 +21,11 @@ body {
 }
 
 #body {
-    min-height: 1000px;
+    min-height: 800px;
     border-left: 3px solid #AEAEAE;
     border-right: 3px solid #AEAEAE;
     display: flex;
-    overflow: hidden;
+    
 }
 
 a {
@@ -145,7 +145,6 @@ aside {
     line-height: 60px;
     padding-left: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
@@ -187,6 +186,7 @@ aside {
 
 /* main */
 main {
+    min-width: 0;
     width: 100%;
 }
 
@@ -241,7 +241,7 @@ main {
 /* 정렬 기능 */
 #sort_wrap {
     width: 200px;
-    margin: -10px 0 0 100px;
+    margin: -10px 0 0 70px;
     display: flex;
     justify-content: space-between;
 }
@@ -253,10 +253,78 @@ main {
 /* 컨텐츠 */
 .content {
     width: 90%;
+    height: 180px;
     border-top: 2px solid #D9D9D9;
     border-bottom: 2px solid #D9D9D9;
-    margin: 50px auto;
-    padding: 20px 30px;
+    margin: 30px auto;
+    padding: 5px 30px 20px;
+}
+
+.content:first-child {
+    margin-top: 10px;
+}
+
+.information {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    margin-left: 30px;
+}
+
+.info span {
+    margin-right: 15px;
+}
+
+.cate, .reg {
+    color: #7C7C7C;
+}
+
+.title {
+    width: 100%;
+    font-size: 35px;
+    margin: 5px 20px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.title:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+}
+
+.cont {
+    height: 4.8em;
+    line-height: 1.2em;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 페이징 */
+#pages {
+    text-align: center;
+    margin: 50px 0 100px;
+}
+
+.page {
+    font-size: 22px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.page:hover {
+    text-decoration: underline;
+}
+
+.myPage {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 10px;
 }
 
 /* footer */

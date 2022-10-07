@@ -6,6 +6,7 @@ $(function() {
         $('#hideMenu').hide();
         setTimeout(function() {
             $('#showMenu').show();
+            $('aside').css({"border-right":'none'});
         }, 500);
     })
     $('.show').click(function() {
@@ -14,6 +15,7 @@ $(function() {
         setTimeout(function() {
             $('#hideMenu').show();
         }, 500)
+        $('aside').css({"border-right":'2px solid #AEAEAE'});
     })
 })
 
@@ -72,7 +74,15 @@ function sort(s) {
     submit();
 }
 
-// 컨텐츠
+// 페이지 클릭 시
+$(function() {
+    $('.page').click(function() {
+        let page = $(this).text();
+        $('#page').val(page);
+
+        submit();
+    })
+})
 
 
 // submit
