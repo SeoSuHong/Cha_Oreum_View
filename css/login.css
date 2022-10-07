@@ -76,7 +76,7 @@ ul {
     border-width: 0px 3px 0px 3px; border-style: solid; border-color: #AEAEAE;}
 #loginbox {width: 335px; margin: 0 auto;}
 #Loginst {font-size: 2rem; font-weight: bold; color: #2D2D2D;}
-#loginiputbox {width: 355px; display: flex; margin-bottom: 20px;}
+#loginiputbox {width: 355px; display: flex; margin-bottom: 20px; margin-top: 30px;}
 #login {width: 252px; height: 100px;}
 .logininput_box {width: 252px; height: 49px; border: 1px solid #2D2D2D; 
     display: flex; align-items: center;}
