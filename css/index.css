@@ -187,7 +187,7 @@ aside {
 /* main */
 main {
     min-width: 0;
-    width: 100%;
+    flex: 1;
 }
 
 #search_wrap {
