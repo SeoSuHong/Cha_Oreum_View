@@ -187,7 +187,133 @@ aside {
 /* main */
 main {
     min-width: 0;
+    width: 100%;
+    padding: 20px;
     flex: 1;
+}
+
+#information, #nickname, #title {
+    padding-left: 30px;
+}
+
+#information {
+    font-size: 18px;
+    color: #7C7C7C;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nickname {
+    font-size: 23px;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 1px solid #AEAEAE;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#contents {
+    font-size: 22px;
+    border-bottom: 1px solid #AEAEAE;
+    padding: 20px 10px;
+}
+
+#guest {
+    width: 400px;
+    margin: 60px auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#guest>div {
+    height: 50px;
+    border: 2px solid #AEAEAE;
+    border-radius: 30px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 2px black;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#guest>div:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+#hart {
+    font-size: 35px;
+}
+
+#like, #comment_btn {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+#comment_img {
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+/* comment */
+#comments, #writeComment {
+    border: 2px solid #AEAEAE;
+    border-radius: 10px;
+    padding: 0 20px 20px;
+}
+
+#comments {
+    border-bottom: 0.5px solid #AEAEAE;
+}
+
+.mainComment {
+    border-bottom: 2px solid #AEAEAE;
+    padding: 20px 20px 0;
+}
+
+.nickname {
+    font-size: 25px;
+}
+
+.comment {
+    font-size: 18px;
+    margin: 15px 10px;
+}
+
+.commRegDate {
+    color: #AEAEAE;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.reply_btn {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.reply_btn:hover {
+    text-decoration: underline;
+}
+
+.reply {
+    padding-top: 10px;
+    display: none;
+}
+
+.subComment {
+    border-bottom: 1px solid #AEAEAE;
+    margin: 0 40px;
+    padding: 10px 30px 0px;
 }
 
 /* footer */
