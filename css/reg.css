@@ -264,12 +264,12 @@ hr {
 
 #reg {
     color: #AEAEAE;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     border: 3px solid #AEAEAE;
     border-radius: 10px;
     background-color: white;
-    margin-top: -20px;
+    margin-top: -10px;
     margin-right: 25px;
     padding: 5px 20px;
 }
