@@ -92,6 +92,13 @@
                 </div>
                 <div id="nickname">Dev_Hong</div>
                 <div id="title">자바 데이터 타입, 변수 그리고 배열</div>
+                <div id="files">
+                    <div id="file">첨부 파일</div>
+                    <div class="file">
+                        <div><a download href="" class="fileName">test.txt</a> | <span class="fileSize">4,096Byte</span></div>
+                        <div><a download href="" class="fileName">test.txt</a> | <span class="fileSize">4,096Byte</span></div>
+                    </div>
+                </div>
                 <div id="contents">
                     국무총리는 국회의 동의를 얻어 대통령이 임명한다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다. 국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다. 대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 누구든지 체포 또는 구속을 당한 때에는 적부의 심사를 법원에 청구할 권리를 가진다. 국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다.
 
@@ -121,9 +128,9 @@
                     <div class="reply">
                         <form name="replyForm" action="" method="post">
                             <div>
-                                <textarea name="reply" id="" cols="30" rows="10" placeholder=" 답글을 입력해 주세요."></textarea>
-                                <div>
-                                    <input type="button" value="전송" onclick="sendReply(comment_no)">
+                                <textarea name="reply" class="reply_txt" cols="30" rows="10" placeholder="답글을 입력해 주세요."></textarea><hr>
+                                <div class="reply_btn_wrap">
+                                    <input type="button" class="reply_send" value="입력" onclick="sendReply(comment_no)">
                                 </div>
                             </div>
                         </form>
@@ -154,9 +161,9 @@
                     <div class="reply">
                         <form name="replyForm" action="" method="post">
                             <div>
-                                <textarea name="reply" id="" cols="30" rows="10" placeholder=" 답글을 입력해 주세요."></textarea>
-                                <div>
-                                    <input type="button" value="전송" onclick="sendReply(comment_no)">
+                                <textarea name="reply" class="reply_txt" cols="30" rows="10" placeholder="답글을 입력해 주세요."></textarea><hr>
+                                <div class="reply_btn_wrap">
+                                    <input type="button" class="reply_send" value="입력" onclick="sendReply(comment_no)">
                                 </div>
                             </div>
                         </form>
@@ -187,9 +194,9 @@
                     <div class="reply">
                         <form name="replyForm" action="" method="post">
                             <div>
-                                <textarea name="reply" id="" cols="30" rows="10" placeholder=" 답글을 입력해 주세요."></textarea>
-                                <div>
-                                    <input type="button" value="전송" onclick="sendReply(comment_no)">
+                                <textarea name="reply" class="reply_txt" cols="30" rows="10" placeholder="답글을 입력해 주세요."></textarea><hr>
+                                <div class="reply_btn_wrap">
+                                    <input type="button" class="reply_send" value="입력" onclick="sendReply(comment_no)">
                                 </div>
                             </div>
                         </form>
@@ -214,11 +221,11 @@
                 </div>
                 <div id="writeComment">
                     <form name="commentForm" action="" method="post">
-                        <div>Dev_Hong</div>
-                        <div>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <div>
-                                <input type="button" value="전송">
+                        <div id="comment_nick">Dev_Hong</div>
+                        <div id="comment_wrap">
+                            <textarea name="comment" id="comment_txt" cols="30" rows="10"></textarea><hr>
+                            <div id="comment_btn_wrap">
+                                <input type="button" id="comment_send" value="입력">
                             </div>
                         </div>
                     </form>
