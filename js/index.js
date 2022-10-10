@@ -1,7 +1,7 @@
 // aside
 // 카테고리 숨기기 클릭 시 카테고리 숨김
 $(function() {
-    $('.hide').click(function() {
+    $('.hide_btn').click(function() {
         $('aside').animate({width:'0px'}, 500);
         $('#hideMenu').hide();
         setTimeout(function() {
@@ -9,7 +9,7 @@ $(function() {
             $('aside').css({"border-right":'none'});
         }, 500);
     })
-    $('.show').click(function() {
+    $('.show_btn').click(function() {
         $('aside').animate({width:'300px'}, 500);
         $('#showMenu').hide();
         setTimeout(function() {

@@ -29,8 +29,8 @@
 
         <!-- aside -->
         <aside>
-            <div id="hideMenu"><img src="../image/hideMenu.png" alt="숨기기" class="hide"></div>
-            <div id="showMenu"><img src="../image/showMenu.png" alt="보이기" class="show"></div>
+            <div id="hideMenu"><img src="../image/hideMenu.png" alt="숨기기" class="hide_btn"></div>
+            <div id="showMenu"><img src="../image/showMenu.png" alt="보이기" class="show_btn"></div>
             <div id="aside_wrap">
                 <div id="menu_btn">
                     <button id="world">World</button>
@@ -112,7 +112,7 @@
                 <div>
                     <div id="hart"><!-- 🤍 -->❤️</div><div id="like">좋아요</div>
                 </div>
-                <div>
+                <div onclick="comment_focus()">
                     <img src="../image/comment.png" id="comment_img"><div id="comment_btn">댓글 쓰기</div>
                 </div>
             </div>
@@ -231,6 +231,14 @@
                     </form>
                 </div>
             </div>
+
+            <!-- 수정, 삭제 -->
+            <!-- <div id="update_wrap">
+                <form action="">
+                    <input type="button" name="" id="update" value="수 정">
+                    <input type="button" name="" id="delete" value="삭 제">
+                </form>
+            </div> -->
 
         </main>
 

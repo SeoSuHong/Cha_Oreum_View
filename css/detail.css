@@ -144,7 +144,6 @@ aside {
     color: #38424A;
     line-height: 60px;
     padding-left: 10px;
-    margin-bottom: 10px;
     text-overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
@@ -415,6 +414,30 @@ main {
     color: #393939;
     border: 2px solid #393939;
     text-decoration: none;
+}
+
+#update_wrap {
+    height: 170px;
+    text-align: center;
+    line-height: 200px;
+}
+
+#update_wrap input {
+    width: 120px;
+    height: 60px;
+    color: #AEAEAE;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #AEAEAE;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 50px;
+    cursor: pointer;
+}
+
+#update_wrap input:hover {
+    color: #393939;
+    border: 2px solid #393939;
 }
 
 /* footer */
